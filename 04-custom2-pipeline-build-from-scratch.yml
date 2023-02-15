@@ -28,7 +28,7 @@ stages:
         steps:
           - task: Docker@2
             inputs:
-              containerRegistry: 'Manual-Devops-AKS'
+              containerRegistry: 'manual-aksdevopsacr-svc'
               repository: 'custom2aksnginxapp1'
               command: 'buildAndPush'
               Dockerfile: '**/Dockerfile'
