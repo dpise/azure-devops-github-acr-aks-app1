@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nginximg 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginximg
+  template:
+    metadata:
+      labels:
+        app: nginximg 
+    spec:
+      containers:
+        - name: nginximg 
+          image: gurudasacr.azurecr.io/nginximg
+          ports:
+          - containerPort: 80
